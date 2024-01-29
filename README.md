@@ -1,2 +1,1 @@
-# SmokACT
-Smok Asset Conversion Tool is a library for converting "raw" assets to Smok versions.
+Smok ACT (Asset Convertion Tool) is a library for converting textures, meshes, and fonts into custom formats for Smok
