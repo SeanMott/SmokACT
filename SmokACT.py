@@ -19,6 +19,10 @@ import Premake_Links
 import Premake_BuildOptions
 import Premake_Flags
 
+import Smok
+import BTDSTD
+import Wireframe
+
 def GeneratePremake():
     premakeCode = ""
 
@@ -40,7 +44,9 @@ def GeneratePremake():
 
     KARProject.includeDirs = {Dep_SDL.SDL_INCLUDE_DIR,
 Dep_FMT.FMT_INCLUDE_DIR, Dep_GLM.GLM_INCLUDE_DIR, Dep_STB.STB_INCLUDE_DIR,
-Dep_Vulkan.VMA_INCLUDE_DIR, Dep_Vulkan.VK_BOOTSTRAP_INCLUDE_DIR, Dep_Vulkan.VULKAN_INCLUDE_DIR, Dep_ImGUI.IMGUI_INCLUDE_DIR}
+Dep_Vulkan.VMA_INCLUDE_DIR, Dep_Vulkan.VK_BOOTSTRAP_INCLUDE_DIR, Dep_Vulkan.VULKAN_INCLUDE_DIR, Dep_ImGUI.IMGUI_INCLUDE_DIR,
+    "Venders/assimp/include", "Venders/assimp/Build/include", BTDSTD.BTD_INCLUDE_DIR,
+    Smok.SMOK_INCLUDE_DIR, Wireframe.PROJECT_LIB_INCLUDE_DIR}
     premakeCode = premakeCode + KARProject.GenerateProjectIncludeString()
 
     premakeCode = premakeCode + Premake_Links.GenerateLinksString({Dep_Vulkan.VULKAN_LINK_DIR})
@@ -54,7 +60,7 @@ Dep_Vulkan.VMA_INCLUDE_DIR, Dep_Vulkan.VK_BOOTSTRAP_INCLUDE_DIR, Dep_Vulkan.VULK
     premakeCode = premakeCode + Premake_Flags.GenerateFlagsString({"NoRuntimeChecks",
     "MultiProcessorCompile"})
 
-    Premake_BuildOptions.GenerateBuildOptionFlagsString("/utf-8")
+    premakeCode = premakeCode + Premake_BuildOptions.GenerateBuildOptionFlagsString({"/utf-8"})
 
     premakeCode = premakeCode + """
 
@@ -99,7 +105,8 @@ filter "configurations:Debug"
     symbols "On"
 """
 
-    premakeCode = premakeCode + Premake_Links.GenerateLinksString({Dep_SDL.SDL_VERSION_DEBUG_LINK_FILEPATH})
+    premakeCode = premakeCode + Premake_Links.GenerateLinksString({Dep_SDL.SDL_VERSION_DEBUG_LINK_FILEPATH,
+    "Venders/assimp/Build/lib/RelWithDebInfo/assimp-vc143-mt.lib", "Venders/assimp/Build/lib/RelWithDebInfo/draco.lib"})
 
     premakeCode = premakeCode + """
 filter "configurations:Release"
@@ -108,7 +115,8 @@ filter "configurations:Release"
 
 """
 
-    premakeCode = premakeCode + Premake_Links.GenerateLinksString({Dep_SDL.SDL_VERSION_RELEASE_LINK_FILEPATH})
+    premakeCode = premakeCode + Premake_Links.GenerateLinksString({Dep_SDL.SDL_VERSION_RELEASE_LINK_FILEPATH,
+    "Venders/assimp/Build/lib/Release/assimp-vc143-mt.lib", "Venders/assimp/Build/lib/Release/draco.lib"})
 
     premakeCode = premakeCode + """
 filter "configurations:Dist"
@@ -119,7 +127,8 @@ filter "configurations:Dist"
     premakeCode = premakeCode + Premake_Defines.GenerateDefinesString({"NDEBUG"})
     premakeCode = premakeCode + Premake_Flags.GenerateFlagsString({"LinkTimeOptimization"})
 
-    premakeCode = premakeCode + Premake_Links.GenerateLinksString({Dep_SDL.SDL_VERSION_DIST_LINK_FILEPATH})
+    premakeCode = premakeCode + Premake_Links.GenerateLinksString({Dep_SDL.SDL_VERSION_DIST_LINK_FILEPATH,
+    "Venders/assimp/Build/lib/MinSizeRel/assimp-vc143-mt.lib", "Venders/assimp/Build/lib/MinSizeRel/draco.lib"})
 
 
     return premakeCode
