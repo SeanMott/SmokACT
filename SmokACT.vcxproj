@@ -77,8 +77,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <PreprocessorDefinitions>GLM_ENABLE_EXPERIMENTAL;GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;VK_USE_PLATFORM_WIN32_KHR;Desktop_Build;Window_Build;BTD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>includes;..\Venders\ImGUI;..\Venders\SDL\include;C:\VulkanSDK\1.3.283.0\Include;..\Smok\includes;..\Venders\assimp\Build\include;..\Venders\VMA\include;..\Wireframe\includes;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\VKBootstrap\src;..\Venders\assimp\include;..\Venders\STB;..\Venders\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;GLM_ENABLE_EXPERIMENTAL;Desktop_Build;Window_Build;VK_USE_PLATFORM_WIN32_KHR;BTD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>includes;C:\VulkanSDK\1.3.283.0\Include;..\Venders\assimp\Build\include;..\Wireframe\includes;..\Smok\includes;..\Venders\SDL\include;..\Venders\STB;..\Venders\GLM;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\ImGUI;..\Venders\VKBootstrap\src;..\Venders\assimp\include;..\Venders\VMA\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -93,7 +93,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>C:\VulkanSDK\1.3.283.0\Lib\vulkan-1.lib;..\Venders\assimp\Build\lib\RelWithDebInfo\assimp-vc143-mt.lib;..\Venders\SDL\Build\RelWithDebInfo\SDL2.lib;..\Venders\assimp\Build\lib\RelWithDebInfo\draco.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\VulkanSDK\1.3.283.0\Lib\vulkan-1.lib;..\Venders\assimp\Build\lib\RelWithDebInfo\draco.lib;..\Venders\assimp\Build\lib\RelWithDebInfo\assimp-vc143-mt.lib;..\Venders\SDL\Build\RelWithDebInfo\SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -101,8 +101,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <PreprocessorDefinitions>GLM_ENABLE_EXPERIMENTAL;GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;VK_USE_PLATFORM_WIN32_KHR;Desktop_Build;Window_Build;BTD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>includes;..\Venders\ImGUI;..\Venders\SDL\include;C:\VulkanSDK\1.3.283.0\Include;..\Smok\includes;..\Venders\assimp\Build\include;..\Venders\VMA\include;..\Wireframe\includes;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\VKBootstrap\src;..\Venders\assimp\include;..\Venders\STB;..\Venders\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;GLM_ENABLE_EXPERIMENTAL;Desktop_Build;Window_Build;VK_USE_PLATFORM_WIN32_KHR;BTD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>includes;C:\VulkanSDK\1.3.283.0\Include;..\Venders\assimp\Build\include;..\Wireframe\includes;..\Smok\includes;..\Venders\SDL\include;..\Venders\STB;..\Venders\GLM;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\ImGUI;..\Venders\VKBootstrap\src;..\Venders\assimp\include;..\Venders\VMA\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -120,7 +120,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalDependencies>C:\VulkanSDK\1.3.283.0\Lib\vulkan-1.lib;..\Venders\assimp\Build\lib\Release\assimp-vc143-mt.lib;..\Venders\assimp\Build\lib\Release\draco.lib;..\Venders\SDL\Build\Release\SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\VulkanSDK\1.3.283.0\Lib\vulkan-1.lib;..\Venders\assimp\Build\lib\Release\assimp-vc143-mt.lib;..\Venders\SDL\Build\Release\SDL2.lib;..\Venders\assimp\Build\lib\Release\draco.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -128,8 +128,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <PreprocessorDefinitions>GLM_ENABLE_EXPERIMENTAL;GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;VK_USE_PLATFORM_WIN32_KHR;Desktop_Build;Window_Build;BTD_DIST;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>includes;..\Venders\ImGUI;..\Venders\SDL\include;C:\VulkanSDK\1.3.283.0\Include;..\Smok\includes;..\Venders\assimp\Build\include;..\Venders\VMA\include;..\Wireframe\includes;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\VKBootstrap\src;..\Venders\assimp\include;..\Venders\STB;..\Venders\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;GLM_ENABLE_EXPERIMENTAL;Desktop_Build;Window_Build;VK_USE_PLATFORM_WIN32_KHR;BTD_DIST;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>includes;C:\VulkanSDK\1.3.283.0\Include;..\Venders\assimp\Build\include;..\Wireframe\includes;..\Smok\includes;..\Venders\SDL\include;..\Venders\STB;..\Venders\GLM;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\ImGUI;..\Venders\VKBootstrap\src;..\Venders\assimp\include;..\Venders\VMA\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -147,7 +147,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalDependencies>C:\VulkanSDK\1.3.283.0\Lib\vulkan-1.lib;..\Venders\SDL\Build\MinSizeRel\SDL2.lib;..\Venders\assimp\Build\lib\MinSizeRel\assimp-vc143-mt.lib;..\Venders\assimp\Build\lib\MinSizeRel\draco.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\VulkanSDK\1.3.283.0\Lib\vulkan-1.lib;..\Venders\assimp\Build\lib\MinSizeRel\assimp-vc143-mt.lib;..\Venders\assimp\Build\lib\MinSizeRel\draco.lib;..\Venders\SDL\Build\MinSizeRel\SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -155,6 +155,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ImportMesh.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Smok\Smok.vcxproj">
+      <Project>{5F718C7C-4BA8-8D0D-F494-7310E0AA090F}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
